@@ -42,8 +42,8 @@
               Generate Password
             </button>
           </div>
-          <div class="my-5">
-            <label>Generated Password</label>
+          <div class="my-5" *ngIf="password">
+            <label>Your Password</label>
             <input class="input" [value]="password" />
           </div>
         </div>
