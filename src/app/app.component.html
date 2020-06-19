@@ -34,8 +34,11 @@
             </label>
           </div>
           <div>
-            <button class="button is-primary is-fullwidth" [disabled]="!length">
-              Primary
+            <button
+              class="button is-primary is-fullwidth"
+              [disabled]="!length || !(useNumbers || useLetters || useSymbols)"
+            >
+              Generate Password
             </button>
           </div>
           <div class="my-5">
