@@ -8,28 +8,39 @@
           </h3>
           <div class="mt-5">
             <label>Length</label>
-            <input class="input" type="text" placeholder="Length" />
+            <input
+              class="input"
+              type="text"
+              placeholder="Length"
+              (input)="handleLengthChange($event)"
+            />
           </div>
           <div class="my-3">
             <label class="checkbox">
-              <input type="checkbox" />
+              <input type="checkbox" (change)="handleUseLettersChange()" />
               Use Letters
             </label>
           </div>
           <div class="my-3">
             <label class="checkbox">
-              <input type="checkbox" />
+              <input type="checkbox" (change)="handleUseNumbersChange()" />
               Use Numbers
             </label>
           </div>
           <div class="my-3">
             <label class="checkbox">
-              <input type="checkbox" />
+              <input type="checkbox" (change)="handleUseSymbolsChange()" />
               Use Symbols
             </label>
           </div>
           <div>
-            <button class="button is-primary is-fullwidth">Primary</button>
+            <button class="button is-primary is-fullwidth" [disabled]="!length">
+              Primary
+            </button>
+          </div>
+          <div class="my-5">
+            <label>Generated Password</label>
+            <input class="input" />
           </div>
         </div>
       </div>
