@@ -37,13 +37,14 @@
             <button
               class="button is-primary is-fullwidth"
               [disabled]="!length || !(useNumbers || useLetters || useSymbols)"
+              (click)="handleGeneratePasswordBtnClick()"
             >
               Generate Password
             </button>
           </div>
           <div class="my-5">
             <label>Generated Password</label>
-            <input class="input" />
+            <input class="input" [value]="password" />
           </div>
         </div>
       </div>
